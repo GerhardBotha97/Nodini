@@ -34,7 +34,7 @@ It's pretty point-and-click, the following buttons on the graph are responsible 
 
 
 ## TODO:
-- [] Appearance and Shortcut Keys.
+- []Appearance and Shortcut Keys.
 - [] Add Tabs so users can work on multiple graphs at the same time.
 - [] Add option to execute directly from Nodini.
 - [] Add function to execute or copy all/selected runners.
