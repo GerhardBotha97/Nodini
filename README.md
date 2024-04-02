@@ -25,7 +25,7 @@ It's pretty point-and-click, the following buttons on the graph are responsible 
 ## Environment Variables:
   1. To use them, place the variable you want between single underscores eg `_Secret_`.
   2. When you Build the playbook, it should appear, and you can enter whatever value you want.
-  3. If it is a secret, you can hide it with the checkbutton.
+  3. If it is a secret, you can hide it with the check-button.
 
 
 ## Runners
@@ -35,6 +35,7 @@ It's pretty point-and-click, the following buttons on the graph are responsible 
 
 ## TODO:
 - [ ] Appearance and Shortcut Keys.
+- [ ] Add "Comment Cards" for better organising of nodes.
 - [ ] Add Tabs so users can work on multiple graphs at the same time.
 - [ ] Add option to execute directly from Nodini.
 - [ ] Add function to execute or copy all/selected runners.
