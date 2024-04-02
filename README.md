@@ -6,20 +6,20 @@ A humble little node-based program for visualizing and managing one-liners. Targ
 
 ## Usage:
 It's pretty point-and-click, the following buttons on the graph are responsible for the following:
-- Add: Add a Node
-- Build: Build your playbook
-- Save: Save the playbook to a template file to share or work on later
-- Load: Load the template file into your graph
-- Clear: Clear all
-- Runner's Clear: Clear the runners
-- Environment Variables' Clear: Clear the variables
+- Add: Add a Node.
+- Build: Build your playbook.
+- Save: Save the playbook to a template file to share or work on later.
+- Load: Load the template file into your graph.
+- Clear: Clear all.
+- Runner's Clear: Clear the runners.
+- Environment Variables' Clear: Clear the variables.
 
 
 ## Node Buttons:
   The node consists of three parts:
-- Text Field: Input your commands
-- Separator dropdown: Select your separator
-- X Button: Remove the individual node from your graph
+- Text Field: Input your commands.
+- Separator dropdown: Select your separator.
+- X Button: Remove the individual node from your graph.
 
 
 ## Environment Variables:
@@ -31,3 +31,10 @@ It's pretty point-and-click, the following buttons on the graph are responsible 
 ## Runners
 - If you wish to share a one-liner without the secret, choose `Copy`.
 - If you want to run it, choose `Run`. Note that this will replace the Variable Name with whatever is in the Value!
+
+
+## TODO:
+- [] Appearance and Shortcut Keys.
+- [] Add Tabs so users can work on multiple graphs at the same time.
+- [] Add option to execute directly from Nodini.
+- [] Add function to execute or copy all/selected runners.
