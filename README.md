@@ -13,16 +13,22 @@ It's pretty point-and-click, the following buttons on the graph are responsible 
 - Runner's Clear: Clear the runners
 - Environment Variables' Clear: Clear the variables
 
+---
+
 ## Node Buttons:
   The node consists of three parts:
 - Text Field: Input your commands
 - Separator dropdown: Select your separator
 - X Button: Remove the individual node from your graph
 
-  ## Environment Variables:
+---
+
+## Environment Variables:
   1. To use them, place the variable you want between single underscores eg `_Secret_`.
   2. When you Build the playbook, it should appear, and you can enter whatever value you want.
   3. If it is a secret, you can hide it with the checkbutton.
+
+---
 
 ## Runners
 - If you wish to share a one-liner without the secret, choose `Copy`.
