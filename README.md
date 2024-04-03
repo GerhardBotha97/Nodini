@@ -39,3 +39,4 @@ It's pretty point-and-click, the following buttons on the graph are responsible 
 - [ ] Add Tabs so users can work on multiple graphs at the same time.
 - [ ] Add option to execute directly from Nodini.
 - [ ] Add function to execute or copy all/selected runners.
+- [ ] Add a reverse function (Turn one-liners into nodes)
