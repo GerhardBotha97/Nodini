@@ -1,5 +1,7 @@
 # Nodini
 A humble little node-based program for visualizing and managing one-liners. Targeted towards bug hunters, pentesters, and lovers of automation.
+
+#### Made with <3 using Godot!
 ---
 <img width="862" alt="Overview" src="https://github.com/GerhardBotha97/Nodini/assets/53526803/cd668ce4-8e83-480d-b0fa-766141653b06">
 
